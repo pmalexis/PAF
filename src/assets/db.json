@@ -1,0 +1,22 @@
+{
+  "coiffures": [
+    {
+      "id":1,
+      "name": "Coiffure 1",
+      "coiffeurName":"Jacques",
+      "image": "http://placehold.it/100/110"
+    },
+    {
+      "id":2,
+      "name": "Coiffure 2",
+      "coiffeurName":"Michel",
+      "image": "http://placehold.it/100/110"
+    },
+    {
+      "id": 3,
+      "name": "Coiffure 3",
+      "coiffeurName":"Jean-Paul",
+      "image": "http://placehold.it/200/210"
+    }
+  ]
+}
