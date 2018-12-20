@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoiffuresService } from "../Services/coiffures.service";
-import { Subscription } from 'rxjs';
+import { CoiffureService} from "../Services/coiffure.service";
 
 @Component({
   selector: 'app-coiffures',
@@ -8,21 +7,17 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./coiffures.component.scss']
 })
 export class CoiffuresComponent implements OnInit {
-  @Input() coiffures: coiffure[];
-  coiffuresSubscription: Subscription;
+  private coiffures: any;
 
-  constructor(private coiffuresService: CoiffuresService) {
-    coiffuresService.list().subscribe( coiffures => {
-      this.coiffures = coiffures;
-    });
+  constructor(private coiffureService: CoiffureService) {
+    this.coiffures = [];
   }
 
   ngOnInit() {
-    this.coiffuresSubscription = this.coiffuresService.coiffures.subscribe(
-      (posts: Post[]) => {
-        this.posts = posts;
-      }
-    );
+    this.coiffureService.list().subscribe(coiffure => {
+      this.coiffures = coiffure;
+      console.log(this.coiffures);
+    });
   }
 
 }
