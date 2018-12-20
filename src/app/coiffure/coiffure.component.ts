@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CoiffureService } from "../Services/coiffure.service";
+import {ActivatedRoute, Router} from '@angular/router';
+import {CoiffureService} from "../Services/coiffure.service";
 
 @Component({
   selector: 'app-coiffure',
@@ -8,21 +8,32 @@ import { CoiffureService } from "../Services/coiffure.service";
   styleUrls: ['./coiffure.component.scss']
 })
 export class CoiffureComponent implements OnInit {
-  private coiffure: any;
+  coiffures: [];
+  coiffure: any;
 
   constructor(
     private activeRoute: ActivatedRoute,
     private router: Router,
     private coiffureService: CoiffureService,
   ) {
-    this.coiffure = [];
+    this.coiffure = {};
   }
 
   ngOnInit() {
     this.activeRoute.params.subscribe((params) => {
-      this.coiffureService.get(params.id).subscribe(coiffure => {
+      this.coiffureService.showHaircut(params.id).subscribe(coiffure => {
         this.coiffure = coiffure;
       });
+    });
+  }
+
+  back() {
+    this.router.navigate(['coiffures']);
+  }
+
+  delete(coiffure) {
+    this.coiffureService.delete(coiffure.id).subscribe(result => {
+      this.back();
     });
   }
 }

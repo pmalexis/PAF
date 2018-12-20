@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CoiffureService {
-  coiffure: [];
+  coiffures: coiffure[];
 
   constructor(private http: HttpClient) {
   }
@@ -14,7 +14,15 @@ export class CoiffureService {
     return this.http.get("http://localhost:3000/coiffures/");
   }
 
-  get(id) {
+  showHaircut(id) {
     return this.http.get("http://localhost:3000/coiffures/" + id);
+  }
+
+  create(datas) {
+    return this.http.post("http://localhost:3000/coiffures", datas)
+  }
+
+  delete(id) {
+    return this.http.delete("http://localhost:3000/coiffures/" + id);
   }
 }

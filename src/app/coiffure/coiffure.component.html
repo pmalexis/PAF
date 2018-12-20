@@ -1,1 +1,12 @@
-<p>Jambon</p>
+<div class="coiffure">
+  <div class="">
+    <img src="{{coiffure.image}}" alt="">
+  </div>
+  <div class="">
+    <span>Coiffure : {{coiffure.name}}</span>
+  </div>
+  <div class="">
+    <span>Coiffeur : {{coiffure.coiffeurName}}</span>
+  </div>
+  <button (click)="delete(coiffure)">Delete</button>
+</div>
