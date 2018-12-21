@@ -5,17 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoiffuresComponent} from "./coiffures/coiffures.component";
 import { CoiffureComponent } from './coiffure/coiffure.component';
+import {FormsModule} from "@angular/forms";
+import { AjoutCoiffureComponent } from './ajout-coiffure/ajout-coiffure.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoiffureComponent,
-    CoiffuresComponent
+    CoiffuresComponent,
+    AjoutCoiffureComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

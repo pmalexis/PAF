@@ -1,0 +1,9 @@
+<div class="addHaircut">
+    <label for="name">Name : </label>
+    <input type="text" id="name" [(ngModel)]="coiffure.name">
+    <label for="coiffeurName">Nom du coiffeur : </label>
+    <input type="text" id="coiffeurName" [(ngModel)]="coiffure.coiffeurName">
+    <label for="image">Image : </label>
+    <input type="file" name="image" id="image" [(ngModel)]="coiffure.image">
+    <button (click)="addHaircut(datas)">Ajouter</button>
+</div>
