@@ -1,13 +1,16 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Coiffure} from "../classes/coiffures";
+import {ActivatedRoute, Router} from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoiffureService {
-  coiffures: coiffure[];
+  coiffures: Array<Coiffure>;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
   }
 
   list() {
@@ -24,5 +27,9 @@ export class CoiffureService {
 
   delete(id) {
     return this.http.delete("http://localhost:3000/coiffures/" + id);
+  }
+
+  back() {
+    this.router.navigate(['coiffures']);
   }
 }

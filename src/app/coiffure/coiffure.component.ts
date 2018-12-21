@@ -27,13 +27,9 @@ export class CoiffureComponent implements OnInit {
     });
   }
 
-  back() {
-    this.router.navigate(['coiffures']);
-  }
-
   delete(coiffure) {
     this.coiffureService.delete(coiffure.id).subscribe(result => {
-      this.back();
+      this.coiffureService.back();
     });
   }
 }

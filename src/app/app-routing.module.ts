@@ -3,10 +3,12 @@ import {RouterModule, Routes} from '@angular/router';
 import {CoiffureComponent} from "./coiffure/coiffure.component";
 import {CoiffuresComponent} from "./coiffures/coiffures.component";
 import {AjoutCoiffureComponent} from "./ajout-coiffure/ajout-coiffure.component";
+import { SearchComponent } from "./search/search.component";
 
 const routes: Routes = [
   {path: 'coiffures', component: CoiffuresComponent},
-  {path: 'add', component: AjoutCoiffureComponent},
+  {path: 'coiffures/add', component: AjoutCoiffureComponent},
+  {path: 'search', component: SearchComponent},
   {path: 'coiffures/:id', component: CoiffureComponent},
   {
     path: '',

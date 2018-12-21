@@ -7,13 +7,15 @@ import { CoiffuresComponent} from "./coiffures/coiffures.component";
 import { CoiffureComponent } from './coiffure/coiffure.component';
 import {FormsModule} from "@angular/forms";
 import { AjoutCoiffureComponent } from './ajout-coiffure/ajout-coiffure.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoiffureComponent,
     CoiffuresComponent,
-    AjoutCoiffureComponent
+    AjoutCoiffureComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

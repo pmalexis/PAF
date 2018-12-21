@@ -30,11 +30,7 @@ export class AjoutCoiffureComponent implements OnInit {
 
   addHaircut() {
     this.coiffureService.create(this.coiffure).subscribe(result => {
-      this.back();
+      this.coiffureService.back();
     });
-  }
-
-  back() {
-    this.router.navigate(['coiffures']);
   }
 }
