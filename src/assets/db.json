@@ -4,19 +4,73 @@
       "id":1,
       "name": "Coiffure 1",
       "coiffeurName":"Jacques",
-      "image": "http://placehold.it/100/110"
+      "image": "https://picsum.photos/150/150/?random"
     },
     {
       "id":2,
       "name": "Coiffure 2",
       "coiffeurName":"Michel",
-      "image": "http://placehold.it/100/110"
+      "image": "https://picsum.photos/150/150/?random"
     },
     {
-      "id": 3,
+      "id":3,
       "name": "Coiffure 3",
       "coiffeurName":"Jean-Paul",
-      "image": "http://placehold.it/200/210"
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":4,
+      "name": "Coiffure 1",
+      "coiffeurName":"Jacques",
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":5,
+      "name": "Coiffure 2",
+      "coiffeurName":"Michel",
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":6,
+      "name": "Coiffure 3",
+      "coiffeurName":"Jean-Paul",
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":7,
+      "name": "Coiffure 1",
+      "coiffeurName":"Jacques",
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":8,
+      "name": "Coiffure 2",
+      "coiffeurName":"Michel",
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":9,
+      "name": "Coiffure 3",
+      "coiffeurName":"Jean-Paul",
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":10,
+      "name": "Coiffure 1",
+      "coiffeurName":"Jacques",
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":11,
+      "name": "Coiffure 2",
+      "coiffeurName":"Michel",
+      "image": "https://picsum.photos/150/150/?random"
+    },
+    {
+      "id":12,
+      "name": "Coiffure 3",
+      "coiffeurName":"Jean-Paul",
+      "image": "https://picsum.photos/150/150/?random"
     }
   ]
 }

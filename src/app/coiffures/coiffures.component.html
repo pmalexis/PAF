@@ -1,16 +1,14 @@
-<div class="coiffure" *ngFor="let coiffure of coiffures">
-  <div class="">
-    <img src="{{coiffure.image}}" alt="">
-  </div>
-  <div class="">
-    <span>{{coiffure.name}}</span>
-  </div>
-
-  <div class="">
-    <span>{{coiffure.coiffeurName}}</span>
-  </div>
-
-  <div>
-    <a routerLink="/coiffures/{{coiffure.id}}">Voir la coiffure</a>
-  </div>
-</div>
+<section class="container-coiffures">
+	<a class="coiffure" 
+	   *ngFor="let coiffure of coiffures" 
+	   routerLink="/coiffures/{{coiffure.id}}" 
+	   [ngStyle]="{'background-image':'url(' + coiffure.image + ')'}" >
+	  
+	  <div class="container-text">
+	  	<div class="text">
+	  		{{coiffure.name}}
+	  		<span>By {{coiffure.coiffeurName}}</span>
+	  	</div>
+	  </div>
+	</a>
+</section>
