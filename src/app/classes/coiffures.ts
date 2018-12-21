@@ -8,5 +8,6 @@ export class Coiffure {
     this.name = name;
     this.image = image;
     this.coiffeurName = coiffeurName;
+    this.id = null;
   }
 }
