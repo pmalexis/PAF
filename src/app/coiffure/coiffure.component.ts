@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {CoiffureService} from "../Services/coiffure.service";
+import {CoiffureService} from '../Services/coiffure.service';
 
 @Component({
   selector: 'app-coiffure',

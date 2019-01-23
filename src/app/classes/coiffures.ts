@@ -4,7 +4,7 @@ export class Coiffure {
   image: string;
   coiffeurName: string;
 
-  constructor(name = "", image = "", coiffeurName = "") {
+  constructor(name = '', image = '', coiffeurName = '') {
     this.name = name;
     this.image = image;
     this.coiffeurName = coiffeurName;
