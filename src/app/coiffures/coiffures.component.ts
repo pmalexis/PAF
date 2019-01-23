@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CoiffureService} from "../Services/coiffure.service";
+import {Component, Input, OnInit} from '@angular/core';
+import {CoiffureService} from "../Services/coiffure.service";
 
 @Component({
   selector: 'app-coiffures',
@@ -7,17 +7,16 @@ import { CoiffureService} from "../Services/coiffure.service";
   styleUrls: ['./coiffures.component.scss']
 })
 export class CoiffuresComponent implements OnInit {
-  private coiffures: any;
+  coiffures: any;
+  @Input() searchName: string;
 
   constructor(private coiffureService: CoiffureService) {
-    this.coiffures = [];
-  }
-
-  ngOnInit() {
-    this.coiffureService.list().subscribe(coiffure => {
-      this.coiffures = coiffure;
+    this.coiffureService.list().subscribe(coiffures => {
+      this.coiffures = coiffures;
       console.log(this.coiffures);
     });
   }
 
+  ngOnInit() {
+  }
 }

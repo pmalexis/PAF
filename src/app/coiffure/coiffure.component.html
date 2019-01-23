@@ -1,1 +1,18 @@
-<p>Jambon</p>
+<section class="container-coiffure">
+  <div class="cover" [ngStyle]="{'background-image':'url(' + coiffure.image + ')'}" >
+    <div class="container-text">
+      <div class="text">
+        {{coiffure.name}}
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div class="">
+    <span>Coiffure : {{coiffure.name}}</span>
+  </div>
+  <div class="">
+    <span>Coiffeur : {{coiffure.coiffeurName}}</span>
+  </div>
+  <button (click)="delete(coiffure)">Delete</button>-->
+</section>
