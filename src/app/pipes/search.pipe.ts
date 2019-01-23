@@ -12,8 +12,8 @@ export class SearchPipe implements PipeTransform {
     }
     for (const el of value) {
       for (const property in el) {
-        let field = el[property] + '';
-        if (typeof args === 'string' && field.indexOf(args) !== -1) {
+        const field = el[property] + '';
+        if (typeof args === 'string' && field.toUpperCase().indexOf(args.toUpperCase()) !== -1) {
           filtered.push(el);
         }
       }

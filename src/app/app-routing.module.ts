@@ -1,15 +1,19 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {CoiffureComponent} from "./coiffure/coiffure.component";
-import {CoiffuresComponent} from "./coiffures/coiffures.component";
-import {AjoutCoiffureComponent} from "./ajout-coiffure/ajout-coiffure.component";
-import { SearchComponent } from "./search/search.component";
+import {CoiffureComponent} from './coiffure/coiffure.component';
+import {CoiffuresComponent} from './coiffures/coiffures.component';
+import {AjoutCoiffureComponent} from './ajout-coiffure/ajout-coiffure.component';
+import { SearchComponent } from './search/search.component';
+import { UserComponent } from './user/user.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   {path: 'coiffures', component: CoiffuresComponent},
   {path: 'coiffures/add', component: AjoutCoiffureComponent},
   {path: 'search', component: SearchComponent},
   {path: 'coiffures/:id', component: CoiffureComponent},
+  {path: 'profile', component: UserComponent},
+  {path: 'login', component: LoginComponent},
   {
     path: '',
     redirectTo: '/coiffures',

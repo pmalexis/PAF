@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CoiffureService} from "../Services/coiffure.service";
+import {CoiffureService} from '../Services/coiffure.service';
 
 @Component({
   selector: 'app-coiffures',
