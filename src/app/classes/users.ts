@@ -7,10 +7,10 @@ export class User {
 
 
   constructor(lastName = '', firstName = '', email = '', password = '') {
+    this.id = null;
     this.lastName = lastName;
     this.firstName = firstName;
     this.email = email;
-    this.id = null;
     this.password = password;
   }
 }
