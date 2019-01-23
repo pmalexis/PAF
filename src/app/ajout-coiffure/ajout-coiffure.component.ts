@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CoiffureService} from "../Services/coiffure.service";
+import {CoiffureService} from '../Services/coiffure.service';
 import {Coiffure} from '../classes/coiffures';
 import {ActivatedRoute, Router} from '@angular/router';
 

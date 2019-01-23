@@ -1,19 +1,37 @@
 <nav>
-	<ul>
-		<li><i class="material-icons">home</i></li>
-		<li><i class="material-icons">face</i></li>
-		<li class="circle"><i class="material-icons">add</i></li>
-		<li><i class="material-icons">cloud_upload</i></li>
-		<li><i class="material-icons">star</i></li>
-	</ul>
-	<div class="more">
-		<div class="circle"><i class="material-icons">search</i></div>
-		<div class="circle"><i class="material-icons">collections</i></div>
-		<div class="circle"><i class="material-icons">message</i></div>
-		<div class="circle"><i class="material-icons">settings</i></div>
-	</div>
+  <ul>
+    <li>
+      <a routerLink="/coiffures"><i class="material-icons">home</i></a>
+    </li>
+    <li>
+      <a routerLink="/coiffures"><i class="material-icons">face</i></a>
+    </li>
+    <li class="circle">
+      <i class="material-icons">add</i>
+    </li>
+    <li>
+      <a routerLink="/coiffures/add"><i class="material-icons">cloud_upload</i></a>
+    </li>
+    <li>
+      <a routerLink="/login"><i class="material-icons">star</i></a>
+    </li>
+  </ul>
+  <div class="more">
+    <div class="circle">
+      <a routerLink="/search"><i class="material-icons">search</i></a>
+    </div>
+    <div class="circle">
+      <a routerLink=""><i class="material-icons">collections</i></a>
+    </div>
+    <div class="circle">
+      <a routerLink=""><i class="material-icons">message</i></a>
+    </div>
+    <div class="circle">
+      <a routerLink=""><i class="material-icons">settings</i></a>
+    </div>
+  </div>
 </nav>
 
 <div class="container">
-	<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
