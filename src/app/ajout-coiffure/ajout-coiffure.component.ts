@@ -22,7 +22,7 @@ export class AjoutCoiffureComponent implements OnInit {
 
   ngOnInit() {
     this.activeRoute.params.subscribe((param) => {
-      this.coiffureService.showHaircut(param.id).subscribe( coiffure => {
+      this.coiffureService.showHaircut(param.id).subscribe( (coiffure: Coiffure) => {
         this.coiffure = coiffure;
       });
     });
