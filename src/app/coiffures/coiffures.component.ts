@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CoiffureService} from "../Services/coiffure.service";
 
 @Component({
@@ -8,6 +8,7 @@ import {CoiffureService} from "../Services/coiffure.service";
 })
 export class CoiffuresComponent implements OnInit {
   coiffures: any;
+  @Input() searchName: string;
 
   constructor(private coiffureService: CoiffureService) {
     this.coiffureService.list().subscribe(coiffures => {

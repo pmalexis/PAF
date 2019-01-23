@@ -8,6 +8,7 @@ import { CoiffureComponent } from './coiffure/coiffure.component';
 import {FormsModule} from "@angular/forms";
 import { AjoutCoiffureComponent } from './ajout-coiffure/ajout-coiffure.component';
 import { SearchComponent } from './search/search.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SearchComponent } from './search/search.component';
     CoiffureComponent,
     CoiffuresComponent,
     AjoutCoiffureComponent,
-    SearchComponent
+    SearchComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

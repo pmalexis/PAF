@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   search:any;
+
   constructor() {
-    this.search = {};
+    this.search = {
+      'name' : ""
+    };
   }
 
   ngOnInit() {
   }
-
 }
