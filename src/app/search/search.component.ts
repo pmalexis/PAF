@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -15,6 +16,6 @@ export class SearchComponent implements OnInit {
     };
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
   }
 }
