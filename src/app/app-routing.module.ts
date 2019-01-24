@@ -6,6 +6,7 @@ import {AjoutCoiffureComponent} from './ajout-coiffure/ajout-coiffure.component'
 import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
 import {LoginComponent} from './login/login.component';
+import {CoiffeursComponent} from './coiffeurs/coiffeurs.component';
 
 const routes: Routes = [
   {path: 'coiffures', component: CoiffuresComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'coiffures/:id', component: CoiffureComponent},
   {path: 'profile', component: UserComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'coiffeurs', component: CoiffeursComponent},
   {
     path: '',
     redirectTo: '/coiffures',

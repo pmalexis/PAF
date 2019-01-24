@@ -77,11 +77,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  signIn() {
-    if (this.user.email === email && this.user.password === password) {
-      console.log(email + password);
+  /*signIn() {
+    if (this.user.email ===  && this.user.password ===  ) {
     } else {
       alert('Votre email et/ou mot de passe est incorrect.');
     }
-  }
+  }*/
 }
