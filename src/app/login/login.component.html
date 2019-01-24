@@ -1,0 +1,61 @@
+<div class="form">
+  <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Inscription</a></li>
+    <li class="tab"><a href="#login">Connexion</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="signup">
+      <h1>Inscrivez-vous !</h1>
+
+      <div class="form">
+        <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              Prénom<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" [(ngModel)]="user.lastName"/>
+          </div>
+          <div class="field-wrap">
+            <label>
+              Nom<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" [(ngModel)]="user.firstName"/>
+          </div>
+        </div>
+        <div class="field-wrap">
+          <label>
+            Adresse Email<span class="req">*</span>
+          </label>
+          <input type="email" required autocomplete="off" [(ngModel)]="user.email"/>
+        </div>
+        <div class="field-wrap">
+          <label>
+            Mot de passe<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" [(ngModel)]="user.password"/>
+        </div>
+        <button type="submit" class="button button-block" (click)="signUp(datas)">Vrouuuummmm</button>
+      </div>
+    </div>
+
+    <div id="login">
+      <h1>Welcome Back!</h1>
+      <div class="form">
+        <div class="field-wrap">
+          <label>
+            Adresse Email<span class="req">*</span>
+          </label>
+          <input type="email" required autocomplete="off" [(ngModel)]="userEmail"/>
+        </div>
+        <div class="field-wrap">
+          <label>
+            Mot de passe<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" [(ngModel)]="userPassword"/>
+        </div>
+        <p class="forgot"><a href="#">Mot de passe oublié ? </a></p>
+        <button class="button button-block" (click)="signIn()">Connexion</button>
+      </div>
+    </div>
+  </div>
+</div>

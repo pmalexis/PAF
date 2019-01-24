@@ -10,10 +10,10 @@ export class SearchPipe implements PipeTransform {
     if (!args) {
       return value;
     }
-    for (const el of value) {
-      for (const property in el) {
-        let field = el[property] + '';
-        if (typeof args === 'string' && field.indexOf(args) !== -1) {
+    if(value != undefined) {
+      for (const el of value) {
+        const field = el.name + '';
+        if (typeof args === 'string' && field.toUpperCase().indexOf(args.toUpperCase()) !== -1) {
           filtered.push(el);
         }
       }
