@@ -1,8 +1,8 @@
 <section class="container-coiffures">
 	<a class="coiffure" *ngFor="let coiffure of coiffures | search: searchName"
-	   routerLink="/coiffures/{{coiffure.id}}" 
+	   routerLink="/coiffures/{{coiffure.id}}"
 	   [ngStyle]="{'background-image':'url(' + coiffure.image + ')'}" >
-	  
+
 	  <div class="container-text">
 	  	<div class="text">
         {{coiffure.name}}
