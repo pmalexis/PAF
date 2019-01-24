@@ -1,5 +1,8 @@
-import {Component, OnInit} from '@angular/core';
 import * as $ from 'jquery';
+import {Component, OnInit} from '@angular/core';
+import {User} from '../classes/users';
+import {UserService} from '../Services/user.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +11,14 @@ import * as $ from 'jquery';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() {
+  user: User;
+
+  constructor
+  (
+    private userService: UserService,
+    private router: Router,
+    private activeRoute: ActivatedRoute) {
+    this.user = new User();
   }
 
   ngOnInit() {
@@ -56,4 +66,21 @@ export class LoginComponent implements OnInit {
       });
     });
   }
+
+  signUp() {
+    if (this.user.firstName.length && this.user.lastName.length && this.user.email.length && this.user.password.length > 0) {
+      this.userService.register(this.user).subscribe(result => {
+        this.router.navigate(['coiffures']);
+      });
+    } else {
+      alert('Veuillez remplir tous les champs.');
+    }
+  }
+
+  /*signIn() {
+    if (this.user.email ===  && this.user.password ===  ) {
+    } else {
+      alert('Votre email et/ou mot de passe est incorrect.');
+    }
+  }*/
 }

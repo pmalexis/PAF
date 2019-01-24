@@ -11,4 +11,8 @@ export class UserService {
 
   constructor(private http: HttpClient, private router: Router) {
   }
+
+  register(datas) {
+    return this.http.post('http://localhost:3000/users', datas);
+  }
 }

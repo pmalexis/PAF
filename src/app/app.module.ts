@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
+import { CoiffeursComponent } from './coiffeurs/coiffeurs.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoginComponent } from './login/login.component';
     SearchPipe,
     UserComponent,
     LoginComponent,
+    CoiffeursComponent,
   ],
   imports: [
     BrowserModule,

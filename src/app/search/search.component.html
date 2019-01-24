@@ -1,12 +1,7 @@
-<h1>Rechercher une coiffure</h1>
-<input class="search" type="text" [(ngModel)]="search.name" />
-<app-coiffures [searchName]="search.name"></app-coiffures>
-
-<!--<script>
-  $(".search").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".text").filter(function() {
-      $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1);
-    });
-  });
-</script>-->
+<div class="container-search">
+	<input class="search" placeholder="Rechercher une coiffure" type="text" [(ngModel)]="search.name"/>
+	<i class="material-icons">search</i>
+</div>
+<div class="under-search">
+	<app-coiffures *ngIf="search.name" [searchName]="search.name"></app-coiffures>
+</div>
