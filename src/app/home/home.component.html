@@ -1,0 +1,16 @@
+<h1 class="home-title">Nos dernières coiffures</h1>
+<section class="container-home">
+    <a class="coiffure" *ngFor="let coiffure of coiffures | orderBy: 'coiffureDate'"
+       routerLink="/coiffures/{{coiffure.id}}"
+       [ngStyle]="{'background-image':'url(' + coiffure.image + ')'}">
+
+        <div class="container-text">
+            <div class="text">
+                {{coiffure.name}}
+                <span>By {{coiffure.coiffeurName}}</span>
+                <span>Description : {{coiffure.coiffureDesc}}</span>
+                <span> {{coiffure.coiffureDate}} </span>
+            </div>
+        </div>
+    </a>
+</section>
