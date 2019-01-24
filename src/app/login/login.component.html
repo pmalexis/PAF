@@ -45,13 +45,13 @@
           <label>
             Adresse Email<span class="req">*</span>
           </label>
-          <input type="email" required autocomplete="off" [(ngModel)]="email"/>
+          <input type="email" required autocomplete="off" [(ngModel)]="userEmail"/>
         </div>
         <div class="field-wrap">
           <label>
             Mot de passe<span class="req">*</span>
           </label>
-          <input type="password" required autocomplete="off" [(ngModel)]="password"/>
+          <input type="password" required autocomplete="off" [(ngModel)]="userPassword"/>
         </div>
         <p class="forgot"><a href="#">Mot de passe oublié ? </a></p>
         <button class="button button-block" (click)="signIn()">Connexion</button>
